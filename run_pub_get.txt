@@ -1,6 +1,5 @@
 cd common_dependencies && flutter pub get &&
-cd .. && cd common_domain && flutter pub get && 
-cd .. && cd common_design_system && flutter pub get && 
+cd .. && cd commons && flutter pub get && 
 cd .. && cd module_home && flutter pub get &&
 cd .. && cd core && flutter pub get &&
 cd .. && cd base_app && flutter pub get && cd ..

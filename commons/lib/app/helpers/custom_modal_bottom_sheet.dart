@@ -3,9 +3,9 @@ import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'package:common_design_system/app/utils/custom_colors.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
+import '../shared/custom_colors.dart';
 import '../utils/misc.dart';
 
 // ignore: body_might_complete_normally_nullable

@@ -232,17 +232,10 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
-  common_design_system:
-    dependency: transitive
-    description:
-      path: "../common_design_system"
-      relative: true
-    source: path
-    version: "0.0.1"
-  common_domain:
+  commons:
     dependency: "direct main"
     description:
-      path: "../common_domain"
+      path: "../commons"
       relative: true
     source: path
     version: "0.0.1"
@@ -904,13 +897,6 @@ packages:
     dependency: transitive
     description:
       path: "../module_home"
-      relative: true
-    source: path
-    version: "0.0.1"
-  module_login:
-    dependency: transitive
-    description:
-      path: "../module_login"
       relative: true
     source: path
     version: "0.0.1"

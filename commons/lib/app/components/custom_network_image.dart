@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as mat;
 
 import 'package:common_dependencies/main.dart';
-import 'package:common_domain/app/helpers/assets_helper.dart';
+import 'package:commons/app/helpers/assets_helper.dart';
 
 class CustomNetworkImage extends StatefulWidget {
   final String imageUrl;

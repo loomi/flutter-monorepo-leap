@@ -1,14 +1,16 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
-import 'package:common_design_system/app/utils/custom_colors.dart';
+import 'package:common_dependencies/main.dart';
 
-void openSelectPictureSheet(
-  BuildContext context, {
-  required Function() getImageCamera,
-  required Function() getImageGallery,
-}) async {
+import '../shared/custom_colors.dart';
+
+import 'image_picker_helper.dart';
+
+void openSelectVideoSheet(BuildContext context) async {
   try {
     showModalBottomSheet(
       backgroundColor: Colors.transparent,
@@ -21,7 +23,20 @@ void openSelectPictureSheet(
               child: Wrap(
                 children: <Widget>[
                   GestureDetector(
-                    onTap: getImageGallery,
+                    onTap: () async {
+                      final status = await Permission.camera.request();
+                      if (status.isGranted) {
+                        getVideoHelper(source: ImageSource.camera);
+                        Navigator.pop(context);
+                      } else {
+                        Navigator.pop(context);
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Permissão de acesso não concedida'),
+                          ),
+                        );
+                      }
+                    },
                     child: Container(
                       width: double.infinity,
                       height: 55,
@@ -34,7 +49,7 @@ void openSelectPictureSheet(
                         ),
                       ),
                       child: Text(
-                        "Escolher na biblioteca",
+                        "Gravar Vídeo",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: CustomColors.black,
@@ -44,7 +59,22 @@ void openSelectPictureSheet(
                     ),
                   ),
                   GestureDetector(
-                    onTap: getImageCamera,
+                    onTap: () async {
+                      final status = await Permission.storage.request();
+                      if (status.isGranted) {
+                        getVideoHelper(source: ImageSource.gallery);
+                        Navigator.pop(context);
+                      } else {
+                        Navigator.pop(context);
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                              'Permissão de acesso não concedida',
+                            ),
+                          ),
+                        );
+                      }
+                    },
                     child: Container(
                       width: double.infinity,
                       height: 55,
@@ -57,7 +87,7 @@ void openSelectPictureSheet(
                         ),
                       ),
                       child: Text(
-                        "Tirar foto",
+                        "Buscar Vídeo",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: CustomColors.black,

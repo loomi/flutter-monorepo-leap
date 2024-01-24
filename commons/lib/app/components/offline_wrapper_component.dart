@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:common_dependencies/main.dart';
 
-import '../utils/custom_colors.dart';
-import '../utils/fonts.dart';
+import '../shared/custom_colors.dart';
+import '../shared/fonts.dart';
 
 class OfflineWrapperComponent extends StatefulWidget {
   final Widget child;

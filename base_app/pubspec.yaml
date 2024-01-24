@@ -17,8 +17,8 @@ dependencies:
   core:
     path: "../core"
 
-  common_domain:
-    path: "../common_domain"
+  commons:
+    path: "../commons"
 
 dev_dependencies:
   flutter_test:

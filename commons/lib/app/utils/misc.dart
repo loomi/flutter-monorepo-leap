@@ -3,7 +3,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import 'package:common_dependencies/main.dart';
-import 'package:common_design_system/app/utils/custom_colors.dart';
+
+import '../shared/custom_colors.dart';
 
 import 'app_global_context.dart';
 import 'fonts.dart';

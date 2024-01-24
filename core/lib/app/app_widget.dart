@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:core/app/routes.dart';
+import 'app_module.dart';
 
 class AppWidget extends StatelessWidget {
   final String initialRoute;
@@ -15,7 +15,7 @@ class AppWidget extends StatelessWidget {
       title: 'Flutter Core',
       theme: ThemeData(primarySwatch: Colors.blue),
       initialRoute: initialRoute,
-      routes: routes,
+      routes: CoreModuleConfig().routes,
     );
   }
 }

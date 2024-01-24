@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import 'package:common_domain/app/utils/screen_utils.dart';
+import 'package:commons/app/utils/screen_utils.dart';
 
 class ResponsiveLayout extends StatelessWidget {
   const ResponsiveLayout({super.key, required this.buildScreen});

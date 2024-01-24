@@ -25,11 +25,8 @@ dependencies:
   common_dependencies:
     path: "../common_dependencies"
 
-  common_domain:
-    path: "../common_domain"
-
-  common_design_system:
-    path: "../common_design_system"
+  commons:
+    path: "../commons"
 
 dev_dependencies:
   flutter_test:

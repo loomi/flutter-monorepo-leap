@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:common_dependencies/main.dart';
 
-import '../utils/custom_colors.dart';
+import '../shared/custom_colors.dart';
 
 // ignore: body_might_complete_normally_nullable
 Future<bool?> showCustomModalBottomSheet(

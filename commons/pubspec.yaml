@@ -1,4 +1,4 @@
-name: common_domain
+name: commons
 
 description: A new Flutter package project.
 
@@ -18,9 +18,6 @@ dependencies:
 
   common_dependencies:
     path: "../common_dependencies"
-
-  common_design_system:
-    path: "../common_design_system"
 
   mobx: 2.3.0+1
   flutter_mobx: 2.2.0+2

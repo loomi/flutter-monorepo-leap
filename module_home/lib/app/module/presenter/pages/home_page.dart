@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:common_design_system/main.dart';
+import 'package:commons/app/shared/custom_colors.dart';
 
 class HomePage extends StatefulWidget {
   static const routeName = "/homePage";

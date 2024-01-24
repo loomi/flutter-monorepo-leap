@@ -1,8 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-import 'package:common_design_system/app/utils/custom_colors.dart';
-
+import '../shared/custom_colors.dart';
 import '../utils/fonts.dart';
 
 import 'custom_modal_bottom_sheet.dart';

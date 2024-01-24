@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as mat;
 
 import 'package:common_dependencies/main.dart';
-import 'package:common_domain/app/helpers/assets_helper.dart';
+import 'package:commons/app/helpers/assets_helper.dart';
 
-import '../utils/custom_colors.dart';
-import '../utils/fonts.dart';
+import '../shared/custom_colors.dart';
+import '../shared/fonts.dart';
 
 class SearchBarComponent extends StatefulWidget {
   final String hintText;

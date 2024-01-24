@@ -1,15 +1,14 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
-import 'package:common_dependencies/main.dart';
-import 'package:common_design_system/app/utils/custom_colors.dart';
+import '../shared/custom_colors.dart';
 
-import 'image_picker_helper.dart';
-
-void openSelectVideoSheet(BuildContext context) async {
+void openSelectPictureSheet(
+  BuildContext context, {
+  required Function() getImageCamera,
+  required Function() getImageGallery,
+}) async {
   try {
     showModalBottomSheet(
       backgroundColor: Colors.transparent,
@@ -22,20 +21,7 @@ void openSelectVideoSheet(BuildContext context) async {
               child: Wrap(
                 children: <Widget>[
                   GestureDetector(
-                    onTap: () async {
-                      final status = await Permission.camera.request();
-                      if (status.isGranted) {
-                        getVideoHelper(source: ImageSource.camera);
-                        Navigator.pop(context);
-                      } else {
-                        Navigator.pop(context);
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Permissão de acesso não concedida'),
-                          ),
-                        );
-                      }
-                    },
+                    onTap: getImageGallery,
                     child: Container(
                       width: double.infinity,
                       height: 55,
@@ -48,7 +34,7 @@ void openSelectVideoSheet(BuildContext context) async {
                         ),
                       ),
                       child: Text(
-                        "Gravar Vídeo",
+                        "Escolher na biblioteca",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: CustomColors.black,
@@ -58,22 +44,7 @@ void openSelectVideoSheet(BuildContext context) async {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () async {
-                      final status = await Permission.storage.request();
-                      if (status.isGranted) {
-                        getVideoHelper(source: ImageSource.gallery);
-                        Navigator.pop(context);
-                      } else {
-                        Navigator.pop(context);
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text(
-                              'Permissão de acesso não concedida',
-                            ),
-                          ),
-                        );
-                      }
-                    },
+                    onTap: getImageCamera,
                     child: Container(
                       width: double.infinity,
                       height: 55,
@@ -86,7 +57,7 @@ void openSelectVideoSheet(BuildContext context) async {
                         ),
                       ),
                       child: Text(
-                        "Buscar Vídeo",
+                        "Tirar foto",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: CustomColors.black,

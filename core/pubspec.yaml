@@ -19,6 +19,9 @@ dependencies:
   module_home:
     path: "../module_home"
 
+  commons:
+    path: "../commons"
+
   common_dependencies:
     path: "../common_dependencies"
 
