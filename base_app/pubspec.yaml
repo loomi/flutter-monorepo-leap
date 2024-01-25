@@ -25,6 +25,22 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  flutter_native_splash: 2.3.2
+  flutter_launcher_icons: 0.13.1
+
+flutter_native_splash:
+  color: "#1f014d"
+  image: "assets/images/leap_icon.png"
+  android: true
+  ios: true
+  # android_gravity: fill
+  # ios_content_mode: scaleAspectFill
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/leap_icon.png"
+  remove_alpha_ios: true
 
 flutter:
   uses-material-design: true
