@@ -9,7 +9,6 @@ export 'package:dio/dio.dart' hide Headers;
 export 'package:form_field_validator/form_field_validator.dart';
 export 'package:package_info_plus/package_info_plus.dart';
 export 'package:intl/intl.dart';
-export 'package:json_serializable/json_serializable.dart';
 export 'package:get_it/get_it.dart';
 export 'package:image_picker/image_picker.dart';
 export 'package:file_picker/file_picker.dart';
